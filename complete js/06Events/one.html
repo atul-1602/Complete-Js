@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: black ;color:white">
+    <button id="btn" style="margin: 50px;">click me</button>
+</body>
+<script>
+    // three ways to add Event
+    // 1- apply directly on body button -not suitable
+    // 2- insidescript but onclick,onhover events 
+     
+             //    document.getElementById('btn').onclick=function(){
+             //         alert("hello");
+             //     }
+     
+    //3-addEventListner best way to use events 
+    //  document.getElementById('btn').addEventListener('click',function(){
+    //     alert("hello");
+    //      },false) false is used by default to prevent some task
+
+
+
+     document.getElementById('btn').addEventListener('click',function(e){
+      console.log(e);
+         })
+
+
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add and Remove element
+    </title>
+</head>
+<body>
+    <ul class="parent">
+        <li>Javascript</li>
+        <li>lol</li>
+    </ul>
+</body>
+<script>
+
+    // this is less efficient method if large no of li's are there
+
+    // function addLanguage(lan){
+    //     const li=document.createElement('li');
+    //     li.innerHTML=`${lan}`;
+    //     document.querySelector('.parent').append(li);
+    // }
+    // addLanguage("java");
+    // addLanguage("java");
+
+    function addOptoLanguage(lang){
+        const li=document.createElement('li');
+        const innertext=document.createTextNode(lang);
+        li.appendChild(innertext); //The appendChild() method of the Node interface adds a node to the end of the list of children of a specified parent node.
+        document.querySelector('.parent').appendChild(li);
+    }
+    addOptoLanguage("java")
+    addOptoLanguage("golang")
+    addOptoLanguage("python")
+
+    //edit elements
+
+     // not efficient beacuse here we only change the content not whole second li
+    //  const secondLang=document.querySelector('li:nth-child(2)')
+    //  secondLang.innerHTML="hello guys" // raversing tree take lot of time
+
+    //optimize
+       // here we replace 2nd li with newli ====optimise
+    const secondLang=document.querySelector('li:nth-child(2)')
+    const newli=document.createElement('li');
+    newli.textContent="atul"
+    secondLang.replaceWith(newli);
+
+    // edit one more
+     const firstele=document.querySelector('li:first-child')
+     firstele.outerHTML='<li>Typescript</li>'
+
+
+     // REMOVE
+
+       const lastli=document.querySelector('li:last-child')
+       lastli.remove();
+</script>
+</html>

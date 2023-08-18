@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=`">
+    <title>RemoveLi </title>
+</head>
+<body>
+    <ui id="lis" style="font-size: 200px;">
+        <li>atul</li>
+        <li>ansh</li>
+        <li>akshat</li>
+        <li>anuj</li>
+        <li>kalus</li>
+        <li>master</li>
+    </ui>
+</body>
+<script>
+    document.getElementById('lis').addEventListener('click',function(e){
+       const target=e.target;
+    //    target.remove()
+       console.log(target);
+    })
+</script>
+</html>
